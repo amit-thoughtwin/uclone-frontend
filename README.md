@@ -1,2 +1,2 @@
 # uclone-frontend
-Online study platdform.
+Online study platform.
