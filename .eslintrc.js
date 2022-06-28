@@ -2,20 +2,41 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
+    'plugin:react/recommended',
+    'airbnb',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
-  rules: {},
+  plugins: [
+    'react',
+    '@typescript-eslint',
+  ],
+  rules: {
+    'import/extensions': 'off',
+    'react/jsx-filename-extension': 'off',
+    // 'react/function-component-definition': 'off',
+    // 'import/prefer-default-export': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: [
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+        ],
+      },
+    },
+  },
+
 };
