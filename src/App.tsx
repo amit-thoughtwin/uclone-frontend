@@ -1,14 +1,10 @@
 import React from 'react';
 import './App.css';
-import Login from './pages/login/login';
-import Register from './pages/register/Register';
+import RouteLink from './Routes/routes';
 
 function App() {
   return (
-    <>
-      <div><Register /></div>
-      <div><Login /></div>
-    </>
+    <RouteLink />
   );
 }
 
